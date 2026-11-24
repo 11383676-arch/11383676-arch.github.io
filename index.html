@@ -7,14 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header & Navigation -->
     <header class="header">
         <nav class="navbar">
             <div class="logo-container"><a href="#" class="brand-logo">Telehealth SLP Clinic</a></div>
             <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle Navigation Menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about" class="nav-item">About Us</a></li>
-                <li><a href="#services" class="nav-item">Services & Pricing</a></li>
+                <li><a href="#services" class="nav-item">Services &amp; Pricing</a></li>
                 <li><a href="#advantages" class="nav-item">Why Us</a></li>
                 <li><a href="#faq" class="nav-item">FAQ</a></li>
                 <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark/Light Mode">🌙 Dark Mode</button></li>
@@ -23,53 +22,63 @@
         </nav>
     </header>
     <main>
-        <section class="hero" id="hero"><div class="hero-container"><div class="hero-content">
-            <span class="badge">HIPAA-Compliant & Synchronous Care</span>
-            <h1 class="hero-title">Accessible, Clinical-Grade Speech Therapy From Home</h1>
-            <p class="hero-description">Delivering specialized, evidence-based speech-language pathology (SLP) services directly to pediatric, adolescent, and adult clients. Eliminate transportation barriers with flexible, high-quality care outside traditional school or physical clinic hours.</p>
-            <div class="hero-actions"><button class="btn btn-primary btn-trigger-modal">Schedule Initial Evaluation</button><a href="#services" class="btn btn-secondary">Explore Services & Pricing</a></div>
+        <section class="hero" id="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="badge">HIPAA-Compliant &amp; Synchronous Care</span>
+                    <h1 class="hero-title">Accessible, Clinical-Grade Speech Therapy From Home</h1>
+                    <p class="hero-description">Delivering specialized, evidence-based speech-language pathology (SLP) services directly to pediatric, adolescent, and adult clients. Eliminate transportation barriers and receive care in a comfortable, familiar environment.</p>
+                    <div class="hero-actions"><button class="btn btn-primary btn-trigger-modal">Schedule Initial Evaluation</button><a href="#services" class="btn btn-secondary">Explore Services &amp; Pricing</a></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="who-we-are" id="who-we-are">
+            <div class="section-container">
+                <div class="who-we-are-grid">
+                    <figure class="who-we-are-image">
+                        <img src="pic%201.jpg" alt="A speech therapist leading an engaging telehealth session with a young client">
+                    </figure>
+                    <div class="who-we-are-content">
+                        <span class="who-we-are-kicker">People first, progress always</span>
+                        <h2>This is who we are</h2>
+                        <p>We make speech-language therapy feel personal, engaging, and accessible. Through secure telehealth, our clinicians connect with clients and families to build communication confidence and create meaningful progress from home.</p>
+                        <p>Every session is tailored to each client’s goals, strengths, and everyday needs, with practical strategies that families can use beyond the screen.</p>
+                        <button class="btn btn-primary btn-trigger-modal">Meet with a clinician</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about"><div class="section-container"><div class="section-header"><h2 class="section-title">Company Overview &amp; Mission</h2></div><div class="about-grid">
+            <div class="about-card"><h3>Our Mission</h3><p>To deliver accessible, clinical-grade speech and language therapy to pediatric and adolescent clients through an intuitive telehealth platform.</p></div>
+            <div class="about-card"><h3>Target Audience</h3><p>Our primary target demographic includes children and adolescents aged 8–17 experiencing speech and language disorders, including articulation, phonological, and social communication needs.</p></div>
+            <div class="about-card"><h3>Clinical Leadership</h3><p>Founded by a Licensed Speech-Language Pathologist (CCC-SLP) overseeing clinical governance, state licensing compliance, and evidence-based practice.</p></div>
         </div></div></section>
-        <section class="about" id="about"><div class="section-container"><div class="section-header"><h2 class="section-title">Company Overview & Mission</h2></div><div class="about-grid">
-            <div class="about-card"><h3>Our Mission</h3><p>To deliver accessible, clinical-grade speech and language therapy to pediatric and adolescent clients through an intuitive telehealth platform—empowering individuals to communicate confidently while giving families flexible, evidence-based care without geographical constraints.</p></div>
-            <div class="about-card"><h3>Target Audience</h3><p>Our primary target demographic comprises children and adolescents aged 8–17 experiencing speech and language disorders, including articulation deficits, stuttering (fluency), voice disorders, and social communication challenges. We also support pediatric early intervention and adult voice or fluency therapy.</p></div>
-            <div class="about-card"><h3>Clinical Leadership</h3><p>Founded by a Licensed Speech-Language Pathologist (CCC-SLP) overseeing clinical governance, state licensing compliance, and evidence-based care, paired with dedicated management of digital patient acquisition, privacy-conscious software, client scheduling, and billing intake.</p></div>
+
+        <section class="services" id="services"><div class="section-container"><div class="section-header"><h2 class="section-title">Service Line &amp; Pricing</h2><p class="section-subtitle">Transparent pricing for individualized virtual care.</p></div><div class="services-grid">
+            <article class="service-card"><div class="card-header"><h3 class="service-title">Initial Clinical Evaluation</h3><span class="service-duration">60–90 Mins</span></div><div class="service-price">$175</div><p class="service-description">Comprehensive assessment of communication strengths and needs with a tailored care plan.</p><ul class="service-features"><li>Detailed clinical assessment</li><li>Personalized treatment plan</li><li>Family consultation</li></ul><button class="btn btn-outline btn-full btn-trigger-modal">Schedule Evaluation</button></article>
+            <article class="service-card featured"><div class="card-badge">Most Requested</div><div class="card-header"><h3 class="service-title">Standard Telehealth Session</h3><span class="service-duration">45 Mins</span></div><div class="service-price">$95</div><p class="service-description">Interactive, goal-focused therapy for speech and language development.</p><ul class="service-features"><li>Individualized exercises</li><li>Progress tracking</li><li>Caregiver guidance</li></ul><button class="btn btn-primary btn-full btn-trigger-modal">Book a Session</button></article>
+            <article class="service-card"><div class="card-header"><h3 class="service-title">Drop-In / Screening Session</h3><span class="service-duration">30 Mins</span></div><div class="service-price">$65</div><p class="service-description">A focused consultation or brief communication screening.</p><ul class="service-features"><li>Goal clarification</li><li>Resource review</li><li>Next-step guidance</li></ul><button class="btn btn-outline btn-full btn-trigger-modal">Request Screening</button></article>
         </div></div></section>
-        <section class="services" id="services"><div class="section-container"><div class="section-header"><h2 class="section-title">Service Line & Pricing</h2><p class="section-subtitle">Transparent pricing for private pay and HSA/FSA card payments.</p></div><div class="services-grid">
-            <article class="service-card"><div class="card-header"><h3 class="service-title">Initial Clinical Evaluation</h3><span class="service-duration">60–90 Mins</span></div><div class="service-price">$500</div><p class="service-description">Full intake, clinical assessment, baseline metrics, written report, and tailored treatment planning.</p><ul class="service-features"><li>Comprehensive assessment</li><li>Parent / guardian interview</li><li>Goals and clinical report</li></ul><button class="btn btn-outline btn-trigger-modal">Book Evaluation</button></article>
-            <article class="service-card featured"><div class="card-badge">Most Requested</div><div class="card-header"><h3 class="service-title">Standard Telehealth Session</h3><span class="service-duration">60 Mins</span></div><div class="service-price">$250</div><p class="service-description">One-on-one therapy focused on articulation, fluency, language comprehension, or motor speech goals.</p><ul class="service-features"><li>Live video session</li><li>Evidence-based activities</li><li>Home practice ideas</li></ul><button class="btn btn-primary btn-trigger-modal">Get Started</button></article>
-            <article class="service-card"><div class="card-header"><h3 class="service-title">Drop-In / Screening Session</h3><span class="service-duration">30 Mins</span></div><div class="service-price">$150</div><p class="service-description">Targeted consultation, screening, home exercise plan review, or progress check-in.</p><ul class="service-features"><li>Brief screening</li><li>Exercise plan review</li><li>Progress check-in</li></ul><button class="btn btn-outline btn-trigger-modal">Book Screener</button></article>
-        </div></div></section>
+
         <section class="advantages" id="advantages"><div class="section-container"><div class="section-header"><h2 class="section-title">Why Choose Our Virtual Practice?</h2></div><div class="advantages-grid">
             <div class="advantage-item"><h3>Multi-State Access</h3><p>Connect with licensed speech-language specialists where telehealth services are available.</p></div>
             <div class="advantage-item"><h3>Zero-Commute Convenience</h3><p>Meet from home, with greater comfort and the option for family involvement.</p></div>
             <div class="advantage-item"><h3>Flexible Intake</h3><p>Digital onboarding and consultation availability designed to make getting started simpler.</p></div>
             <div class="advantage-item"><h3>Privacy-Conscious Care</h3><p>We prioritize secure tools and responsible handling of client information.</p></div>
         </div></div></section>
+
         <section class="faq" id="faq"><div class="section-container"><div class="section-header"><h2 class="section-title">Frequently Asked Questions</h2></div><div class="faq-accordion" id="faqAccordion">
-            <div class="faq-item"><button class="faq-question"><span>How does telehealth speech therapy work?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Sessions are conducted live via video. Therapists use interactive tools and exercises tailored to the client's goals.</p></div></div>
-            <div class="faq-item"><button class="faq-question"><span>What licensing standards are followed?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Therapists should be appropriately licensed for the locations where they and their clients are physically present during sessions.</p></div></div>
-            <div class="faq-item"><button class="faq-question"><span>What forms of payment do you accept?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Payment and coverage depend on provider policies and your plan. Please confirm details before booking.</p></div></div>
+            <div class="faq-item"><button class="faq-question"><span>How does telehealth speech therapy work?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Sessions take place through a secure video platform. Clinicians use live activities, visual supports, and guided practice with the client and family.</p></div></div>
+            <div class="faq-item"><button class="faq-question"><span>What licensing standards are followed?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Therapists should hold the appropriate state license and professional credentials for the location of both the clinician and client.</p></div></div>
+            <div class="faq-item"><button class="faq-question"><span>What forms of payment do you accept?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Payment and coverage options are confirmed during enrollment. This demonstration site does not process payments.</p></div></div>
         </div></div></section>
     </main>
-    <div class="modal" id="bookingModal" aria-hidden="true"><div class="modal-overlay" id="modalOverlay"></div><div class="modal-content"><button class="modal-close" id="modalClose" aria-label="Close Modal">&times;</button><h3 class="modal-title">Schedule a Consultation</h3><p class="modal-subtitle">Fill out the information below to start the intake process.</p><form class="booking-form" id="bookingForm"><div class="form-group"><label for="clientName">Full Name</label><input type="text" id="clientName" required placeholder="e.g., Jane Doe"></div><div class="form-group"><label for="clientEmail">Email Address</label><input type="email" id="clientEmail" required placeholder="e.g., jane@example.com"></div><div class="form-group"><label for="serviceSelect">Service Desired</label><select id="serviceSelect" required><option value="">Select a service...</option><option value="evaluation">Initial Evaluation ($500)</option><option value="session">Standard Therapy Session ($250)</option><option value="screener">Drop-In / Screening ($150)</option></select></div><div class="form-group"><label for="notes">Brief Description of Speech/Language Goals</label><textarea id="notes" rows="3" placeholder="Describe current challenges or goals..."></textarea></div><button type="submit" class="btn btn-primary btn-full">Submit Intake Request</button></form></div></div>
-    <footer class="footer"><div class="footer-container"><div class="footer-brand"><h4>Telehealth Speech Therapy Clinic</h4><p>Virtual speech-language pathology practice concept.</p></div><div class="footer-links"><h5>Quick Links</h5><ul><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#advantages">Why Us</a></li><li><a href="#faq">FAQ</a></li></ul></div><div class="footer-legal"><p>&copy; 2026 Telehealth Speech Therapy Clinic. School project concept.</p></div></div></footer>
+
+    <div class="modal" id="bookingModal" aria-hidden="true"><div class="modal-overlay" id="modalOverlay"></div><div class="modal-content"><button class="modal-close" id="modalClose" aria-label="Close Booking Modal">×</button><h2 class="modal-title">Schedule a Consultation</h2><p class="modal-subtitle">Tell us a little about what you are looking for.</p><form class="booking-form" id="bookingForm"><div class="form-group"><label for="clientName">Your name</label><input id="clientName" name="clientName" required></div><div class="form-group"><label for="clientEmail">Email address</label><input id="clientEmail" name="clientEmail" type="email" required></div><div class="form-group"><label for="serviceType">Service</label><select id="serviceType" name="serviceType"><option>Initial Evaluation</option><option>Standard Session</option><option>Drop-In / Screening</option></select></div><div class="form-group"><label for="clientMessage">What can we help with?</label><textarea id="clientMessage" name="clientMessage" rows="4"></textarea></div><button type="submit" class="btn btn-primary btn-full">Submit Request</button></form></div></div>
+
+    <footer class="footer"><div class="footer-container"><div class="footer-brand"><h4>Telehealth Speech Therapy Clinic</h4><p>Virtual speech-language pathology practice concept.</p></div><div class="footer-links"><h5>Explore</h5><ul><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#faq">FAQ</a></li></ul></div><div class="footer-legal"><p>© 2026 Telehealth SLP Clinic. Demonstration website.</p></div></div></footer>
     <script src="script.js"></script>
-    <script type="text/javascript">
-      (function(d, t) {
-          var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-          v.onload = function() {
-            window.voiceflow.chat.load({
-              verify: { projectID: '6af2947b9479d5adb607371d' },
-              url: 'https://general-runtime.voiceflow.com',
-              voice: { url: 'https://runtime-api.voiceflow.com' },
-              environmentID: 'main',
-              versionVariant: 'published'
-            });
-          };
-          v.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs';
-          v.type = 'text/javascript';
-          s.parentNode.insertBefore(v, s);
-      })(document, 'script');
-    </script>
 </body>
 </html>
