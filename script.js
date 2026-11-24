@@ -93,9 +93,87 @@ document.addEventListener('DOMContentLoaded', () => {
     form.reset();
     closeModal();
   });
+
+  // Add requested photos and logo without replacing the existing page content.
+  const imageStyles = document.createElement('style');
+  imageStyles.textContent = `
+    .site-logo-image { width: 42px; height: 42px; object-fit: cover; border-radius: 9px; vertical-align: middle; margin-right: 10px; }
+    .logo-container, .footer-brand { display: flex; align-items: center; gap: 10px; }
+    .footer-logo-image { width: 48px; height: 48px; object-fit: cover; border-radius: 10px; }
+    .extra-photo { margin: 28px auto 0; max-width: 760px; }
+    .extra-photo img { display: block; width: 100%; max-height: 430px; object-fit: cover; border-radius: 16px; box-shadow: 0 12px 32px rgba(20,50,45,.14); }
+    .extra-photo figcaption { margin-top: 9px; color: #647981; font-size: 13px; text-align: center; }
+    .location-gallery { padding: 64px 0; background: #e9f4f1; }
+    .location-gallery .location-heading { max-width: 720px; margin: 0 auto 28px; padding: 0 22px; text-align: center; }
+    .location-gallery h2 { margin: 0 0 8px; color: #183c51; font-size: clamp(28px, 4vw, 40px); }
+    .location-gallery p { margin: 0; color: #647981; }
+    .location-gallery-grid { width: min(1120px, calc(100% - 44px)); margin: auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .location-gallery figure { margin: 0; overflow: hidden; border-radius: 15px; background: #fff; box-shadow: 0 10px 28px rgba(20,50,45,.10); }
+    .location-gallery img { display: block; width: 100%; height: 320px; object-fit: cover; }
+    .location-gallery figcaption { padding: 12px 16px; color: #263b45; font-size: 13px; font-weight: 600; }
+    @media (max-width: 650px) { .location-gallery-grid { grid-template-columns: 1fr; }.location-gallery img { height: 250px; }.extra-photo { margin-top: 20px; } }
+  `;
+  document.head.appendChild(imageStyles);
+
+  const makeImage = (src, alt, className) => {
+    const image = document.createElement('img');
+    image.src = src;
+    image.alt = alt;
+    image.loading = 'lazy';
+    if (className) image.className = className;
+    return image;
+  };
+
+  // Use pic 3 as the brand mark in the header and footer.
+  const brandLink = document.querySelector('.brand-logo');
+  if (brandLink && !brandLink.querySelector('img')) {
+    brandLink.prepend(makeImage('pic%203.jpg', 'Telehealth SLP Clinic logo', 'site-logo-image'));
+  }
+  const footerBrand = document.querySelector('.footer-brand');
+  if (footerBrand && !footerBrand.querySelector('.footer-logo-image')) {
+    footerBrand.prepend(makeImage('pic%203.jpg', 'Telehealth SLP Clinic logo', 'footer-logo-image'));
+  }
+
+  // Add pic 2 immediately below the existing “This is who we are” content.
+  const whoSection = document.getElementById('who-we-are');
+  const whoContainer = whoSection?.querySelector('.section-container');
+  if (whoContainer && !whoContainer.querySelector('[data-extra-photo="who"]')) {
+    const figure = document.createElement('figure');
+    figure.className = 'extra-photo';
+    figure.dataset.extraPhoto = 'who';
+    figure.append(makeImage('pic%202.jpg', 'Speech therapy clinic and client photo', ''));
+    const caption = document.createElement('figcaption');
+    caption.textContent = 'Personal, supportive speech-language care';
+    figure.append(caption);
+    whoContainer.append(figure);
+  }
+
+  // Add the location photo gallery at the bottom of the page, above the footer.
+  if (!document.getElementById('location-gallery')) {
+    const gallery = document.createElement('section');
+    gallery.id = 'location-gallery';
+    gallery.className = 'location-gallery';
+    gallery.setAttribute('aria-labelledby', 'location-gallery-title');
+    gallery.innerHTML = '<div class="location-heading"><h2 id="location-gallery-title">A welcoming place to connect</h2><p>A look at the spaces and surroundings that make our clinic feel warm and inviting.</p></div><div class="location-gallery-grid"></div>';
+    const grid = gallery.querySelector('.location-gallery-grid');
+    [
+      ['pic%204.jpg', 'View of the clinic location', 'Our location'],
+      ['pic%205.jpg', 'Another view of the clinic location', 'A welcoming space']
+    ].forEach(([src, alt, captionText]) => {
+      const figure = document.createElement('figure');
+      figure.append(makeImage(src, alt, ''));
+      const caption = document.createElement('figcaption');
+      caption.textContent = captionText;
+      figure.append(caption);
+      grid.append(figure);
+    });
+    const footer = document.querySelector('footer');
+    if (footer) footer.before(gallery);
+    else document.body.append(gallery);
+  }
 });
 
-// Voiceflow AI chat widget
+// Voiceflow AI chat widget — kept in place while page images are added.
 (function(d, t) {
   var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
   v.onload = function() {
